@@ -1,12 +1,15 @@
+import { useState } from "react"
 import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLink, NavBtn, NavBtnLink } from "./NavElems"
 import { FaBars } from 'react-icons/fa'
+import Sidebar from '../Sidebar/'
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
   return <>
     <Nav>
       <NavContainer>
         <NavLogo to='/'>LOGO</NavLogo>
         <MobileIcon>
-          <FaBars/>
+          <FaBars onClick={() => setIsOpen(prev => !prev)}/>
         </MobileIcon>
         <NavMenu>
           <NavItem>
@@ -24,6 +27,7 @@ const Navbar = () => {
         </NavBtn>
       </NavContainer>
     </Nav>
+    <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}/>
   </>
 }
 
