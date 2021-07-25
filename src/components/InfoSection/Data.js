@@ -1,6 +1,6 @@
-export const homeObj1 = {
+export const landingSectionData = [{
   id: "about",
-  lightbg: false,
+  lightBg: false,
   lightText: true,
   lightTextDesc: true,
   topline: "Top Line",
@@ -13,4 +13,21 @@ export const homeObj1 = {
   dark: true,
   primary: true,
   darkText: false
-} 
+},
+{
+  id: "services",
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topline: "Top Line",
+  headline: "headline",
+  description: "description",
+  buttonLabel: "Get Started",
+  imgStart: true,
+  img: "img/svg1.svg",
+  alt: "alt text",
+  dark: false,
+  primary: false,
+  darkText: true
+},
+]
