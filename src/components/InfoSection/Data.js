@@ -15,7 +15,7 @@ export const landingSectionData = [{
   darkText: false
 },
 {
-  id: "services",
+  id: "discover",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,

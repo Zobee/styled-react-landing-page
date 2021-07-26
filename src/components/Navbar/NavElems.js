@@ -76,7 +76,7 @@ export const NavLink = styled(ScrollLink)`
   height: 100%;
   cursor: pointer;
 
-  &.active {
+  &:hover, &:active {
     border-bottom: 3px solid #01bf71;
   }
 `
