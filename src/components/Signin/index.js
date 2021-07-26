@@ -1,7 +1,7 @@
 import {BackArrow, SignInContainer, SignInHeader, SignInForm, SignInLabel, SignInInput} from "./SignInElems"
 import {Button} from '../ButtonElems'
 import {Link} from 'react-router-dom'
-function index() {
+const Signin = () => {
   return (
     <SignInContainer>
       <Link to='/'>
@@ -23,4 +23,4 @@ function index() {
   )
 }
 
-export default index
+export default Signin;

@@ -6,6 +6,7 @@ import InfoSection from './components/InfoSection';
 import {landingSectionData} from './components/InfoSection/Data'
 import Services from './components/Services';
 import Signin from './components/Signin'
+import Footer from './components/Footer';
 function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
           <Signin/>
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
