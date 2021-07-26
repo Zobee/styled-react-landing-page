@@ -4,12 +4,14 @@ import { BrowserRouter as Router } from "react-router-dom"
 import Hero from './components/Hero';
 import InfoSection from './components/InfoSection';
 import {landingSectionData} from './components/InfoSection/Data'
+import Services from './components/Services';
 function App() {
   return (
     <Router>
       <Navbar />
       <Hero />
       {landingSectionData.map(dataobj => <InfoSection {...dataobj}/>)}
+      <Services />
     </Router>
   );
 }
