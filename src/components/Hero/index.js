@@ -14,7 +14,7 @@ import HeroVid from "../../media/herovid.mp4"
 const Hero = () => {
   const [hover, setHover] = useState(false)
   return (
-    <HeroContainer>
+    <HeroContainer id='home'>
       <HeroBg>
         <VideoBg autoPlay loop muted src={HeroVid} type="video/mp4"/>
       </HeroBg>
