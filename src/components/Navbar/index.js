@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLink, NavBtn, NavBtnLink } from "./NavElems"
 import { FaBars } from 'react-icons/fa'
 import Sidebar from '../Sidebar/'
+import { animateScroll as scroll } from "react-scroll"
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrollNav, setScrollNav] = useState(false)
@@ -17,22 +19,22 @@ const Navbar = () => {
   return <>
     <Nav scrollNav={scrollNav}>
       <NavContainer>
-        <NavLogo to='/'>LOGO</NavLogo>
+        <NavLogo to='/' onClick={() => scroll.scrollToTop()}>LOGO</NavLogo>
         <MobileIcon>
           <FaBars onClick={() => setIsOpen(prev => !prev)}/>
         </MobileIcon>
         <NavMenu>
           <NavItem>
-            <NavLink to='about'>About</NavLink>
+            <NavLink to='about' smooth duration={500} spy exact="true" offset={-80}>About</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to='discover'>Discover</NavLink>
+            <NavLink to='discover' smooth duration={500} spy exact="true" offset={-80}>Discover</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to='services'>Services</NavLink>
+            <NavLink to='services' smooth duration={500} spy exact="true" offset={-80}>Services</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to='signup'>Get Started</NavLink>
+            <NavLink to='signup' smooth duration={500} spy exact="true" offset={-80}>Get Started</NavLink>
           </NavItem>
         </NavMenu>
         <NavBtn>
