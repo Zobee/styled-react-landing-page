@@ -1,11 +1,21 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLink, NavBtn, NavBtnLink } from "./NavElems"
 import { FaBars } from 'react-icons/fa'
 import Sidebar from '../Sidebar/'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrollNav, setScrollNav] = useState(false)
+
+  const changeNav = () => {
+    window.scrollY >= 80 ? setScrollNav(true) : setScrollNav(false);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+  },[])
+
   return <>
-    <Nav>
+    <Nav scrollNav={scrollNav}>
       <NavContainer>
         <NavLogo to='/'>LOGO</NavLogo>
         <MobileIcon>
